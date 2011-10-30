@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv = "Content-Type" content = "text/html; charset=utf-8"/>
+		<meta name = "viewport" content = "user-scalable=no"/> 
+		
+		<title>Slides from PDF</title>  <!-- Change this to set the title on the browser tab -->
+		<!-- 
+			This is a stripped-down version of Richard Milewski's Simple HTML Slides 
+			It will synchronize slide changes across multiple machines.
+			Visit http://slides.netfools.com/ to learn more.
+		-->
+		<script src="http://slides.netfools.com/js/LAB.min.js"></script>
+		<script>
+			 $LAB
+	        .script("http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js").wait()
+	        .script("http://slides.netfools.com/js/sylvester.js")
+			.script("http://slides.netfools.com/js/jquery.animtrans.js").wait()		
+			.script("http://slides.netfools.com/js/purecssmatrix.js").wait()
+			.script("http://slides.netfools.com/js/md5.js")
+			.script("http://slides.netfools.com/js/jquery-impromptu.3.1.min.js")
+			.script("http://slides.netfools.com/js/jquery.zoomooz.js")
+			.script("http://slides.netfools.com/js/jquery.doubletap.js")
+			.script("http://slides.netfools.com/js/jquery.touchwipe.min.js")
+			.script("http://slides.netfools.com/js/slide.control.1.2.js");
+		</script>
+		
+		<link rel="stylesheet" href="http://slides.netfools.com/style/zoomooz.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="http://slides.netfools.com/style/jqi.css" type="text/css" media="screen">
+
+		<!-- slide style.css describes how slides look You can replace it with your own version -->
+		<link rel="stylesheet" href="http://slides.netfools.com/style/slide-style.css" type="text/css" media="screen">
+		
+		<!-- slide-themes.css sets the various slide themes (0-9).  You can replace it with your own version -->
+		<link rel="stylesheet" href="http://slides.netfools.com/style/slide-themes.css" type="text/css" media="screen">
+		
+		<!-- colors.css defines a set of color classes slide backgrounds -->
+		<link rel="stylesheet" href="http://slides.netfools.com/style/colors.css" type="text/css" media="screen">
+		
+		<style>
+		/* Custom Style for ProtoMaster */
+		ul {margin-left: -35px; } 
+		.theme02 .slide h3 {font-weight: 200; }
+		</style>
+		
+	</head>
+	<body>
+		<noscript><h2>This won't work without Javascript enabled.</h2></noscript>
+
+		<div id="container" class="theme02"> <!-- Set default theme by changing the class  
+											      Press keys 1 through 0 to change theme  
+			                                      Themes are defined in slide-themes.css   -->
+					
+			<!--*****************************************************************************************
+			*
+			*   To create a new slide make a <div> and give it the slide class and a color class.
+			*
+			*   Examples: 
+			*
+			* 		<div class="slide green" >  ..some slide content... </div>
+			*  
+			*       <div class="slide red no-fade>  ...content... </div>
+			*  
+			*       <div class="slide blue break>  ...content... </div>
+			*
+			*   Only colors defined as classes above will work, but you can add your own.
+			*
+			*   The no-fade class disables the background color fade effect.
+			*                        
+			*******************************************************************************************-->
+		 
+		 
+			<!-- This file has demonstrates "autosets", i.e. sets of slides made from PDF files.
+                 You can also enter slide content directly, for details see the source for 				
+				 http://slides.netfools.com/index.html 
+			-->
+			    
+				
+				<!-- To specify a slide autoset, put a set of images files into a
+					web accessible directory. Name them something like name-01 ... name-XX,
+					create a div with:  class = "autoset"
+					id			= a unique name for the set of slides
+					data-source	= the location of the slides on the web
+					data-prefix	= the slide name prefix
+					data-type	= the file type
+					data-count	= the number of slides in the set
+					
+					To create a directory of slides from a pdf (on a Mac)
+					1 - Open the pdf in Preview and choose File > Print
+					2 - Click on the PDF button (at the bottom) and choose Print to iPhoto
+					3 - Open iPhoto and select the album containing your slides
+					4 - Choose File > Export and change the File Name dropdown to "Sequential" 
+				-->
+					<!--**************************  A Slide   ******************************-->
+				
+				<div class="slide tangerine" >
+					<h3>How to turn a PDF slide deck into a live HTML presentation with synchronized slide changes over the web. (Macintosh)</h3>
+					<div class='slideBody'>
+						<div class="row">
+							<div class = 'twoColumn'>
+								<ul>
+									<li>Save the page source for this file as MySlides.html.</li>
+									<li>Open your PDF Slide Deck in Preview.app.</li>
+									<li>Choose File > Print &amp; click on the PDF button.</li>
+									<li>Choose "Save PDF to iPhoto."</li>	
+									<li>Open iPhoto and select the album holding your slides.</li>
+									<li>Choose File > Export.</li>
+									<li>Set the following:
+									<ul>
+										<li>Kind: JPEG </li>
+										<li>JPEG Quality: Medium</li>
+										<li>Size: Medium (or Large for better quality)</li>
+										<li>File Name: Sequential</li>
+										<li>Prefix for sequential: slide-</li>
+									</ul>
+								<li>Click the "Export" button and save to a new directory.</li>	
+								<li>Upload the directory of images to a web server.<sup>&dagger;</sup></li>
+								</ul>				
+							</div>
+							<div class = 'highlight twoColumn'>
+								<img class="slideimage" src='http://slides.netfools.com/downloads/images/it_girl.gif' >
+								</div>
+								<div class= "twoColumn">
+								<ul style="margin-top: 30px;">
+									<li>Edit MySlides.html to make two changes near the end, just after 
+									<i>&lt;!-- PDF Slides --&gt;</i>:</li>
+									<ul>
+										<li>Set data-source to the path to your images.</li>
+										<li>Set data-count to the number of slides you have.</li>
+									</ul>
+									<li>Upload MySlides.html to the web server.<sup>&dagger;</sup></li>				
+								</ul>
+							</div>	
+						</div>
+						<p class="smallText">&dagger; If you don't need to synchronize slide changes across multiple machines, no web server is necessary. Simply set the data-source attribute to reference a local directory of images and open MySlides.html in your browser. </p>
+					</div>
+					
+				</div>
+				
+				<!-- "PDF Slides" -->
+				<div class="autoset" id="set01" 
+					data-source	="http://slides.netfools.com/downloads/images/" 
+					data-prefix = "slide-"
+					data-type	= ".jpg"
+					data-count	= "1"	
+				></div>
+		 			
+				
+				
+		</div> <!-- end of slide #container -->
+	</body>
+</html>

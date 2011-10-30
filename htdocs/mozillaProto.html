@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv = "Content-Type" content = "text/html; charset=utf-8"/>
+		<meta name = "viewport" content = "user-scalable=no"/> 
+		
+		<title>Simple HTML Slides</title>  <!-- Sets the title of your presentation on the browser tab -->
+		
+		<script src="http://slides.netfools.com/js/LAB.min.js"></script>
+		<script>
+			 $LAB
+	        .script("http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js").wait()
+	        .script("http://slides.netfools.com/js/sylvester.js")
+			.script("http://slides.netfools.com/js/jquery.animtrans.js").wait()		
+			.script("http://slides.netfools.com/js/purecssmatrix.js").wait()
+			.script("http://slides.netfools.com/js/md5.js")
+			.script("http://slides.netfools.com/js/jquery-impromptu.3.1.min.js")
+			.script("http://slides.netfools.com/js/jquery.zoomooz.js")
+			.script("http://slides.netfools.com/js/jquery.doubletap.js")
+			.script("http://slides.netfools.com/js/jquery.touchwipe.min.js")
+			.script("http://slides.netfools.com/js/slide.control.1.2.js");
+		</script>
+		
+		<link rel="stylesheet" href="http://slides.netfools.com/style/mozilla-slide-themes.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="http://slides.netfools.com/style/zoomooz.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="http://slides.netfools.com/style/jqi.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="http://slides.netfools.com/style/slide-style.css" type="text/css" media="screen">
+		
+		
+		
+		<style type="text/css">
+		
+	  		/* **************    CSS Classes that define slide background colors    **************** */
+
+			.no-fade  { background-image: none; } /* The no-fade class disables the background fade effect */
+				
+		     /* Change these or add your own. */	
+			 /* See http://en.wikipedia.org/wiki/List_of_colors */		  
+			
+			.red       {background-color: hsl(000,99%,60%)} /* hsl colors are easier to tweak than hex rgb */
+			.orange    {background-color: hsl(030,99%,60%)} /* The first number is the hue */
+			.yellow    {background-color: hsl(060,99%,60%)} /* The second number is the color saturation (intensity) */
+			.chartreuse{background-color: hsl(090,99%,60%)} /* The third number is the lightness */
+
+			.green     {background-color: hsl(120,99%,60%)}
+			.grass     {background-color: hsl(150,99%,60%)}
+			.cyan      {background-color: hsl(180,99%,60%)}
+			.azure     {background-color: hsl(210,99%,60%)}
+			.blue      {background-color: hsl(240,99%,60%)}
+			.purple    {background-color: hsl(270,99%,60%)}
+			.magenta   {background-color: hsl(300,99%,60%)}
+			.rose      {background-color: hsl(330,99%,60%)}
+			
+			.tangerine {background-color: hsl( 33,99%,50%)}
+			.peach	   {background-color: hsl( 39,99%,85%)}
+			.plum      {background-color: hsl(300,33%,70%)}
+			.pear      {background-color: hsl( 66,65%,54%)}	
+			
+			.taupe     {background-color: hsl( 25,32%,62%)}
+			.wheat     {background-color: hsl( 39,77%,70%)}	  			
+			.ecru      {background-color: hsl( 45,35%,63%)}   
+			.vanilla   {background-color: hsl( 48,75%,81%)}   
+			.pearl	   {background-color: hsl( 46,46%,89%)}   
+														
+		    .gray	   {background-color: hsl( 60,10%,59%)}
+			.ash       {background-color: hsl(135,03%,72%)}
+			.xanadu    {background-color: hsl(136,08%,60%)}
+			.slate     {background-color: hsl(210,13%,30%)}
+												
+			.brown	   {background-color: hsl( 30,29%,46%)}
+			.copper	   {background-color: hsl( 18,61%,63%)}
+			.gold	   {background-color: hsl( 50,65%,72%)}
+			.silver    {background-color: hsl(  0,12%,76%)}	
+			
+			.custom1   {background-color: hsl( 58,35%,75%)}  /* Chosen to match the background in the video */
+			.hsOrange  {background-color: hsl( 49,99%,51%)}  /* Hackasaurus Orange */
+			.hsYellow  {background-color: hsl( 60,99%,50%)}  /* Hackasaurus Yellow */
+			.hsBlue    {background-color: hsl(194,89%,75%)}  /* Hackasaurus Goggles Blue */
+			.hsBlue2   {background-color: hsl(210,99%,50%)}  /* Hackasaurus Cape Blue (lightened) */
+	  	</style>
+		
+	</head>
+	<body>
+		<noscript><h2>You really need to have Javascript enabled.</h2></noscript>
+		
+
+		<div id="container" class="theme05"> <!-- Set default theme by changing the class  
+											      Press keys 1 through 0 to change theme  
+			                                      Themes are defined in slide-themes.css   -->
+					
+			<!--*****************************************************************************************
+			*
+			*   To create a new slide make a <div> and give it the slide class and a color class.
+			*
+			*   Examples: 
+			*
+			* 		<div class="slide green" >  ..some slide content... </div>
+			*  
+			*       <div class="slide red no-fade>  ...content... </div>
+			*  
+			*       <div class="slide blue break>  ...content... </div>
+			*
+			*   Only colors defined as classes above will work, but you can define your own.
+			*
+			*   The no-fade class disables the background color fade effect.
+			*                        
+			*******************************************************************************************-->
+		 
+		 	
+				<!-- You can make "autosets" of slides from PDFs of presentations.
+				 
+					To specify a slide autoset, put a set of images files into a
+					web accessible directory. Name them something like name-01 ... name-XX,
+					create a div with:  class = "autoset"
+					id			= a unique name for the set of slides
+					data-source	= the location of the slides on the web
+					data-prefix	= the slide name prefix
+					data-type	= the file type
+					data-count	= the number of slides in the set
+					
+					You can have more than one autoset, and you can freely intermix regular 
+					slides and autosets.
+					
+					To create a directory of slides from a pdf (on a Mac)
+					1 - Open the pdf in Preview and choose File > Print
+					2 - Click on the PDF button (at the bottom) and choose Print to iPhoto
+					3 - Open iPhoto and select the album containing your slides
+					4 - Choose File > Export and change the File Name dropdown to "Sequential" 
+				-->
+				
+				
+				<!--  Uncomment this example and edit to suit.   Move it anywhere in the sequence
+						
+				<div class="autoset" id="set01" 
+					data-source	="./small" 
+					data-prefix = "slide-"
+					data-type	= ".jpg"
+					data-count	= "60"	
+				></div>
+		 			
+				-->
+		 
+		 
+			   <!--**************************  A Slide   ******************************-->
+		
+			    <div class="slide hsOrange" >  
+			     	<h4>Richard Milewski's</h4>
+				    <h1>Simple HTML Slides</h1>
+			    	<div class='slideBody'>
+				         <div class='autoBox highlight centerText'>
+				        	<h3>An Experiment In Helping Users Move From<br>
+				        	Powerpoint & Keynote to Standards-Based HTML.</h3>
+				        	<h4>Inspired by Atul Varma's <a target="_blank" href="http://www.toolness.com/wp/?p=665">"Magic Ink"</a> blog post &amp; htmlpad slides.</h4>
+				        </div>
+				        <p class='autobox centerText'>Click on the next slide or press <b>&rarr;</b></p>
+
+			        </div> 
+				</div>
+				
+		 		
+			    
+		 		<!--**************************  A Slide   ******************************-->
+	
+	
+				<div class="slide hsYellow" >
+			    	<h2>Works with Most Modern Browsers</h2>
+			    	<h3 class="slideBody">Supported browsers:</h3>
+			    	<div>
+			    		<img src="images/ff.png" alt="Firefox">
+			    		<img src="images/safari.png" alt="Safari">
+			    		<img src="images/chrome.png" alt="Chrome">
+			    		<img src="images/opera.png" alt="Opera">
+			    	</div>
+			    	<p>IE-10 might work, but hasn't been tested.</p>
+			    	<p>Some themes are not well supported by Opera.<br>
+			    	(Background image gradients and multiple background images don't appear to work).</p>
+			    </div>
+			    
+			    
+	
+				<!--**************************  A Slide   ******************************-->
+		
+				<div class="slide hsBlue" >
+					<h2>Easy to Edit</h2>
+					<div class='slideBody autoBox'>
+						<ul class="biggerText">
+						<li>Designed to be Edited by Users, Not Web Developers</li>
+						<li><b>Very Simple</b> HTML File Structure</li>
+						<li>Easy-To-Read, Heavily Commented HTML</li>
+						<li>Most CSS and All Javascript in Linked Files</li>
+						</ul>
+						<p class="centerText"> <i>(Take a peek at the page source to see for yourself!)</i></p><br>
+					</div>
+				</div>
+	
+								
+			
+				<!--**************************  A Slide   ******************************-->
+				
+				<div class="slide hsBlue2" >
+					<h2>Easy to Edit</h2>
+					<div class='slideBody'>
+						<h2 class=centerText>Pre-Defined CSS Slide Classes</h2>
+						<div class="row">
+							<div class = 'highlight twoColumn'>
+								<p>&lt;div class="slide blue"&gt;<br>
+								   &nbsp; &nbsp; &lt;h1&gt;Slide Title&lt;/h1&gt;<br>
+								   &nbsp; &nbsp; &lt;div class="slideBody highlight"&gt;<br>
+								   &nbsp; &nbsp; &nbsp; &nbsp; Slide contents (any HTML)<br>
+								   &nbsp; &nbsp; &lt;/div&gt;<br>
+								   &lt;/div&gt;<br>
+								</p>
+							</div>
+							<div class = 'twoColumn'>
+								<br>
+								<p>"slide" - starts a new slide<br>
+								   "blue" - sets the background gradient color<br><br>
+								   "slideBody" - adjusts elements downward<br>
+								   "highlight" - applies background highlighting <br>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+				
+				<!--**************************  A Slide   ******************************--> 
+
+				 <div class="slide hsYellow">
+			    	<h2>Other Predefined Classes</h2>
+			    	<div class="slideBody">
+		    			<div class="autoBox highlight">
+		    				<p>&lt;div class="autobox highlight"&gt;<br>
+		    				Creates a centered box (like this highlighted one) that adjusts to fit 
+		    				   the width of the contents.</p>
+		    			
+		    				<p>Text Manipulation Classes:</p>
+		    				<ul>
+		    				<li class="centerText">centerText - Centers text</li>
+		    				<li>tinyText - <span class="tinyText">Makes Text 60% of normal size.</span></li>
+		    				<li>smallText - <span class="smallText">Makes Text 80% of normal size.</span></li>
+							<li>bigText - <span class="bigText">Makes Text 125% of normal size.</span></li>
+							<li>biggerText - <span class="biggerText">Makes Text 150% of normal size.</span></li>
+							<li>biggestText - <span class="biggestText">Makes Text 200% of normal size.</span></li>  
+							</ul> 
+		    			</div>
+		    		</div>
+			    </div>
+				
+				<!--**************************  A Slide   ******************************-->
+	
+			    <div class="slide hsBlue">
+			    	<h3>Predefined Classes for</h3><h2>Multi-Column Layouts</h2>
+			    	<div class="slideBody smallText">
+			    		&lt;div class="row"&gt;
+			    		<div class="row">
+			    			<div class="twoColumn highlight">
+			    				<p>&lt;div class="twoColumn highlight"&gt;<br>&lt;/div&gt;</p>
+			    			</div>
+			    			<div class="twoColumn highlight">
+			    				<p>&lt;div class="twoColumn highlight"&gt;<br>&lt;/div&gt;</p>
+			    			</div>
+			    		</div>
+			    		&lt;/div&gt;<br>&lt;div class="row"&gt;
+			    		<div class="row">
+			    			<div class="threeColumn highlight">
+			    				<p>&lt;div class="threeColumn highlight"&gt;<br>&lt;/div&gt;</p>
+			    			</div>
+			    			<div class="threeColumn">
+			    				<p>&lt;div class="threeColumn"&gt;<br>&lt;/div&gt;</p>
+			    			</div>
+			    			<div class="threeColumn highlight">
+			    				<p>&lt;div class="threeColumn highlight"&gt;<br>&lt;/div&gt;</p>
+			    			</div>
+			    		</div>
+			    		&lt;/div&gt;<br>&lt;div class="row"&gt;
+			    		<div class="row">
+			    			<div class="threeColumn highlight">
+			    				<p>&lt;div class="threeColumn highlight"&gt;<br>&lt;/div&gt;</p>
+			    			</div>
+			    			<div class="twoThirds highlight">
+			    				<p>&lt;div class="twoThirds highlight"&gt;<br>&lt;/div&gt;<br></p>
+			    			</div>
+			    		</div>
+			    		&lt;/div&gt;
+			    	</div>
+			    	<br>
+			    </div>
+		
+					<!--**************************  A Slide   ******************************-->
+				
+				<div class="slide tangerine" >
+					<h2>Images are Easy</h2>
+					<div class='slideBody'>
+						<div class="row">
+							<div class = 'highlight twoColumn'>
+								<img class="slideimage" src='http://art.phillipmartin.info/art_picasso.gif' >
+							</div>
+							<div class = 'twoColumn'>
+								<br>
+								<h3>Adaptive Sizing</h3>
+								
+								<p>&lt;img class='slideimage' src='path-to-image' &gt;<br><br>
+								'slideimage - fits the image onto the slide.<br>
+								   Works inside 2 and 3 column layouts too.<br>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+		
+				<!--**************************  A Slide   ******************************-->
+	
+			    <div class="slide custom1" >
+			    	<h2>Video Slides</h2>
+			    	<div class="slideBody autoBox highlight">
+						<video id="v1" controls>
+						 	<source src="http://milewski.us/MozEd/topics/passwords/video/media/Passwords8-640.mp4"  type='video/mp4;'>
+				  			<source src="http://milewski.us/MozEd/topics/passwords/video/media/Passwords8-640.theora.ogv"  type='video/ogg;'>
+				  			<source src="http://milewski.us/MozEd/topics/passwords/video/media/Passwords8-640.webm" type='video/webm;'>
+					    	<p>Your browser does not support the &lt;video&gt; element.</p>
+					    	<p><a href="http://www.mozilla.com/en-US/firefox/switch.html">
+					    		Switch to Firefox</a> and enjoy everything the Open Web has to offer.</p>
+					    </video>
+					    <div class="centerText">
+							<button onclick="document.getElementById('v1').play()">Play</button>
+						    <button onclick="document.getElementById('v1').pause()">Pause</button>
+						    <button onclick="document.getElementById('v1').volume += 0.25">Volume Up</button>
+						    <button onclick="document.getElementById('v1').volume -= 0.25">Volume Down</button>
+						    <button onclick="document.getElementById('v1').muted = true;">Mute</button>
+						    <button onclick="document.getElementById('v1').muted = false">Unmute</button>
+						</div>	
+			    	</div>
+			    	<br>
+				</div>
+		
+		
+				
+				
+		</div> <!-- end of slide #container -->
+	</body>
+</html>

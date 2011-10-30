@@ -1,0 +1,401 @@
+/* Presentation Themes */
+
+
+/* Web Fonts used below */
+
+@import url('http://fonts.googleapis.com/css?family=Josefin+Sans+Std+Light&subset=latin');
+@import url('http://fonts.googleapis.com/css?family=Vollkorn:regular,italic,bold,bolditalic&subset=latin');
+@import url('http://fonts.googleapis.com/css?family=Neucha&subset=latin');
+@import url('http://fonts.googleapis.com/css?family=Neuton&subset=latin');
+@import url('http://fonts.googleapis.com/css?family=Arvo:regular,italic,bold,bolditalic&subset=latin');
+@import url('http://fonts.googleapis.com/css?family=Molengo&subset=latin');
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&subset=latin');
+
+@font-face {
+    font-family: 'MetaWebPro-Book';
+    src: url('http://www.mozilla.org/img/fonts/MetaWebPro-Book.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'MetaWebPro-Bold';
+    src: url('http://www.mozilla.org/img/fonts/MetaWebPro-Bold.woff') format('woff');
+}
+
+
+
+
+/* Corporate - sort of boring, but useful for PDF slide deck autosets */
+
+.theme01 .slide {
+	font-family: Neuton, Helvetica, sans-serif;
+	font-weight: 300;
+	color: hsl(0,0%,20%);
+	border: 2px solid hsl(0,0%,30%);
+	background-image: -moz-linear-gradient(top,rgba(255,255,255,1),rgba(255,255,255,0));
+	background-image: -webkit-gradient(linear,left top, left bottom, from(rgba(255,255,255,1)), to(rgba(255,255,255,0)));
+}
+
+.theme01 .autoslide {
+	padding: 0;
+}
+
+
+/* Modern - less boring than corporate */
+
+.theme02 .slide {
+	font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, sans-serif;
+	font-weight:200;
+	color: hsl(0,0%,20%);
+	
+	border: 1px solid hsl(0,0%,20%);
+	border-top-right-radius: 30px;
+	-moz-border-radius-topright: 30px;
+	-webkit-border-top-right-radius: 30px;
+	-o-border-top-right-radius: 30px;
+	
+	border-bottom-left-radius: 30px;
+	-moz-border-radius-bottomleft: 30px;
+	-webkit-border-bottom-left-radius: 30px;
+	-o-border-bottom-left-radius: 30px;
+	
+	background-image: -webkit-linear-gradient(top,rgba(255,255,255,1),rgba(255,255,255,0));
+	background-image:    -moz-linear-gradient(top,rgba(255,255,255,1),rgba(255,255,255,0));
+	background-image:     -ms-linear-gradient(top,rgba(255,255,255,1),rgba(255,255,255,0));
+	background-image:      -o-linear-gradient(top,rgba(255,255,255,1),rgba(255,255,255,0));
+	background-image:         linear-gradient(top,rgba(255,255,255,1),rgba(255,255,255,0));
+	background-image: -webkit-gradient(linear,left top, left bottom, from(rgba(255,255,255,1)), to(rgba(255,255,255,0)));
+	 }	
+
+.theme02 .slide h1 { font-weight: 100; }
+.theme02 .slide h2 { font-weight: 100; }
+.theme02 .slide h3 { font-weight: 100; }
+.theme02 .slide h4 { font-weight: 100; }
+
+.theme02 .highlight {
+    background-color: rgba(255,255,255,0.5);
+
+	border-top-left-radius: 30px;
+	-moz-border-radius-topleft: 30px;
+	-webkit-border-top-left-radius: 30px;
+	-O-border-top-left-radius: 30px;
+	
+	border-bottom-right-radius: 30px;
+	-moz-border-radius-bottomright: 30px;
+	-webkit-border-bottom-right-radius: 30px;
+	-O-border-bottom-right-radius: 30px;
+}	
+
+
+
+/* Josefin - Like Modern but with a Google Web Font */
+
+.theme03 .slide {
+	font-family: 'Josefin Sans Std Light', arial, sans-serif; 
+	font-weight:200;
+	color: hsl(0,0%,20%);
+	
+	border: 1px solid hsl(0,0%,20%);
+	border-top-right-radius: 30px;
+	-moz-border-radius-topright: 30px;
+	-webkit-border-top-right-radius: 30px;
+	-O-border-top-right-radius: 30px;
+	
+	border-bottom-left-radius: 30px;
+	-moz-border-radius-bottomleft: 30px;
+	-webkit-border-bottom-left-radius: 30px;
+	-O-border-bottom-left-radius: 30px;
+	
+	background-image: -webkit-linear-gradient(top,rgba(255,255,255,1),rgba(255,255,255,0));
+	background-image:    -moz-linear-gradient(top,rgba(255,255,255,1),rgba(255,255,255,0));
+	background-image:     -ms-linear-gradient(top,rgba(255,255,255,1),rgba(255,255,255,0));
+	background-image:      -o-linear-gradient(top,rgba(255,255,255,1),rgba(255,255,255,0));
+	background-image:         linear-gradient(top,rgba(255,255,255,1),rgba(255,255,255,0));
+	background-image: -webkit-gradient(linear,left top, left bottom, from(rgba(255,255,255,1)), to(rgba(255,255,255,0)));
+}	
+
+.theme03 .slide h1 { font-weight: 100; }
+.theme03 .slide h2 { font-weight: 100; }
+.theme03 .slide h3 { font-weight: 100; }
+.theme03 .slide h4 { font-weight: 100; }
+
+.theme03 .highlight {
+	border-top-left-radius: 30px;
+	-moz-border-radius-topleft: 30px;
+	-webkit-border-top-left-radius: 30px;
+	-O-border-top-left-radius: 30px;
+	
+	border-bottom-right-radius: 30px;
+	-moz-border-radius-bottomright: 30px;
+	-webkit-border-bottom-right-radius: 30px;
+	-O-border-bottom-right-radius: 30px;
+}	
+
+
+
+
+/* Abstract Blue Background 7
+by Fir0002 (http://commons.wikimedia.org/wiki/User:Fir0002)
+Creative Commons Attribution Share-Alike 3.0 license
+http://commons.wikimedia.org/wiki/File:Abstract_blue_background7.jpg
+*/
+
+.theme04 .slide {
+	font-family: Molengo, Helvetica, sans-serif;
+	font-weight:200;	
+	color: hsl(0,0%,99%);
+	
+	background: url("../images/Abstract_blue_background7.jpg");
+	background-size: cover;
+	-moz-background-size: cover;
+	border: 3px solid black;
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-O-border-radius: 15px;
+}
+
+.theme04 .slide .highlight {
+	background-color: hsla(0,0%,25%,0.35);
+}
+
+.theme04 a {
+	color: hsl(240,99%,85%);
+	font-weight: bold;
+}
+
+
+
+/*  Hackasaurus 1  */
+	
+.theme05 .slide {
+	font-family: "Open Sans", Helvetica, sans-serif;
+	font-weight: 600;
+	color: black;
+	border: 2px solid hsl(0,0%,40%);
+	
+	border-top-right-radius: 60px;
+	-moz-border-radius-topright: 60px;
+	-webkit-border-top-right-radius: 60px;
+	-O-border-top-right-radius: 60px;
+
+	background: url("../images/hackasaurus2.jpg");
+	background-position: top right;
+	background-size: cover;
+}
+
+.theme05 .slide h1 { font-weight: 800; width: 80%; }
+.theme05 .slide h2 { font-weight: 700; width: 80%; }
+.theme05 .slide h3 { font-weight: 700; width: 80%; }
+.theme05 .slide h4 { font-weight: 700; width: 80%; }
+
+.theme05 .highlight {	/* use in <div> tags to make a highlighted block */
+	background-color: hsla(0,0%,99%,0.4);
+}
+	
+.theme05 .autoslide img {
+	margin-top: 30px;
+}
+
+
+
+/*  Hackasaurus 2  */
+	
+.theme06 .slide {
+	font-family: "Open Sans", Helvetica, sans-serif;
+	font-weight: 600;
+	color: black;
+	border: 2px solid hsl(0,0%,40%);
+	
+	border-top-right-radius: 60px;
+	-moz-border-radius-topright: 60px;
+	-webkit-border-top-right-radius: 60px;
+	-O-border-top-right-radius: 60px;
+
+	background: url("../images/hackasaurus.png");
+	background-position: top right;
+	
+}
+
+.theme06 .slide h1 { font-weight: 800; }
+.theme06 .slide h2 { font-weight: 700; }
+.theme06 .slide h3 { font-weight: 700; }
+.theme06 .slide h4 { font-weight: 700; }
+
+.theme06 .highlight {	/* use in <div> tags to make a highlighted block */
+	background-color: hsla(0,0%,99%,0.4);
+}
+	
+.theme06 .autoslide img {
+	margin-top: 30px;
+}
+
+
+/*  Hackasaurus 3 */
+	
+.theme07 .slide {
+		font-family: Molengo, Helvetica, sans-serif;
+	font-weight: 300;
+	color: black;
+	border: 2px solid hsl(0,0%,40%);	
+	border-top-right-radius: 60px;
+	-moz-border-radius-topright: 60px;
+	-webkit-border-top-right-radius: 60px;
+	-O-border-top-right-radius: 60px;
+
+	background-image: url('../images/supergirl200.png'),-webkit-linear-gradient(top,#FFEF8D,#FFFFFF);
+	background-image: url('../images/supergirl200.png'),   -moz-linear-gradient(top,#FFEF8D,#FFFFFF);
+	background-image: url('../images/supergirl200.png'),    -ms-linear-gradient(top,#FFEF8D,#FFFFFF);
+	background-image: url('../images/supergirl200.png'),     -o-linear-gradient(top,#FFEF8D,#FFFFFF);
+	background-image: url('../images/supergirl200.png'),        linear-gradient(top,#FFEF8D,#FFFFFF);	
+	
+	background-position: top right;
+	background-repeat: no-repeat; 
+}
+
+.theme07 .autoslide img {
+	margin-top: 120px;
+}
+
+
+.theme07 .slide h1 { font-weight: 300; width: 80%;}
+.theme07 .slide h2 { font-weight: 300; width: 80%;}
+.theme07 .slide h3 { font-weight: 300; width: 80%;}
+.theme07 .slide h4 { font-weight: 300; width: 80%;}
+
+.theme07 .slide .highlight h1 { font-weight: 300; width: 95%;}
+.theme07 .slide .highlight h2 { font-weight: 300; width: 100%;}
+.theme07 .slide .highlight h3 { font-weight: 300; width: 100%;}
+.theme07 .slide .highlight h4 { font-weight: 300; width: 100%;}
+
+
+
+.theme07 .highlight {     /* use in <div> tags to make a highlighted block */
+	background-color: hsla(0,0%,99%,0.4);
+	
+	border-top-left-radius: 30px;
+	-moz-border-radius-topleft: 30px;
+	-webkit-border-top-left-radius: 30px;
+	-O-border-top-left-radius: 30px;
+	
+	border-bottom-right-radius: 30px;
+	-moz-border-radius-bottomright: 30px;
+	-webkit-border-bottom-right-radius: 30px;
+	-O-border-bottom-right-radius: 30px;
+
+}
+
+
+/*  Mozilla - Wordmark is a trademark of Mozilla */
+	
+.theme08 .slide {
+		font-family: Molengo, Helvetica, sans-serif;
+	font-weight: 300;
+	color: black;
+	border: 2px solid hsl(0,0%,40%);
+	
+	border-top-right-radius: 60px;
+	-moz-border-radius-topright: 60px;
+	-webkit-border-top-right-radius: 60px;
+	-O-border-top-right-radius: 60px;
+
+	background-image: url('../images/mozillaBlack.png'),-webkit-linear-gradient(top,rgba(255,255,255,1),rgba(255,255,255,0));
+	background-image: url('../images/mozillaBlack.png'),   -moz-linear-gradient(top,rgba(255,255,255,1),rgba(255,255,255,0));
+	background-image: url('../images/mozillaBlack.png'),    -ms-linear-gradient(top,rgba(255,255,255,1),rgba(255,255,255,0));
+	background-image: url('../images/mozillaBlack.png'),     -o-linear-gradient(top,rgba(255,255,255,1),rgba(255,255,255,0));
+	background-image: url('../images/mozillaBlack.png'),        linear-gradient(top,rgba(255,255,255,1),rgba(255,255,255,0));
+	background-image: url('../images/mozillaBlack.png'), -webkit-gradient(linear,left top, left bottom, from(rgba(255,255,255,1)), to(rgba(255,255,255,0)));
+	
+	background-position: top right;
+	background-repeat: no-repeat; 
+}
+
+.theme08 .slide h1 { font-weight: 300; }
+.theme08 .slide h2 { font-weight: 300; }
+.theme08 .slide h3 { font-weight: 300; }
+.theme08 .slide h4 { font-weight: 300; }
+
+.theme08 .highlight {     /* use in <div> tags to make a highlighted block */
+	background-color: hsla(0,0%,99%,0.4);
+}
+	
+.theme08 .autoslide img {
+	margin-top: 30px;
+}
+
+
+
+
+/* Firefox theme - Logo is a trademark of Mozilla*/
+
+.theme09 .slide {
+	font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, sans-serif;
+	font-weight: 200;
+	color: black;
+	border: 2px solid hsl(0,0%,40%);
+	
+	border-top-right-radius: 60px;
+	-moz-border-radius-topright: 60px;
+	-webkit-border-top-right-radius: 60px;
+	-O-border-top-right-radius: 60px;
+	
+	background-image: url('../images/firefox120.png'),-webkit-linear-gradient(top,rgba(255,255,255,1),rgba(255,255,255,0));
+	background-image: url('../images/firefox120.png'),   -moz-linear-gradient(top,rgba(255,255,255,1),rgba(255,255,255,0));
+	background-image: url('../images/firefox120.png'),    -ms-linear-gradient(top,rgba(255,255,255,1),rgba(255,255,255,0));
+	background-image: url('../images/firefox120.png'),     -o-linear-gradient(top,rgba(255,255,255,1),rgba(255,255,255,0));
+	background-image: url('../images/firefox120.png'),        linear-gradient(top,rgba(255,255,255,1),rgba(255,255,255,0));
+	background-image: url('../images/firefox120.png'), -webkit-gradient(linear,left top, left bottom, from(rgba(255,255,255,1)), to(rgba(255,255,255,0)));
+		
+	background-position: top right;
+	background-repeat: no-repeat; 
+}
+
+.theme09 .slide h1 { font-weight: 100; }
+.theme09 .slide h2 { font-weight: 100; }
+.theme09 .slide h3 { font-weight: 100; }
+.theme09 .slide h4 { font-weight: 100; }
+
+.theme09 .highlight {     /* use in <div> tags to make a highlighted block */
+	background-color: hsla(0,0%,99%,0.4);
+}
+
+.theme09 .autoslide img {
+	margin-top: 80px;
+}
+
+
+/*  Adopt Mozilla
+    Based on a Creative Collective image by Foxyboy
+    Creative Commons Attribution Share-Alike License */
+	
+.theme10 .slide {
+	font-family: Neucha, "Marker Felt", Arial, Helvetica, sans-serif;
+	font-weight: 200;
+	color: white;
+	border: 2px solid hsl(0,0%,40%);
+	
+	border-top-right-radius: 60px;
+	-moz-border-radius-topright: 60px;
+	-webkit-border-top-right-radius: 60px;
+	-O-border-top-right-radius: 60px;
+
+	background-color: black;
+	background-image: url('../images/AdoptMozilla.png');	
+	background-position: top right;
+	background-repeat: no-repeat; 
+	
+}
+
+
+.theme10 .highlight {     /* use in <div> tags to make a highlighted block */
+	background-color: hsla(8,5%,50%,0.4);
+}
+
+
+.theme10 a {
+	color: hsl(240,90%,70%);
+	font-weight: bold;
+}
+
+.theme10 .autoslide img {
+	margin-top: 100px;
+}

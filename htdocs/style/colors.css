@@ -1,0 +1,69 @@
+			.red       {background-color: hsl( 00,80%,60%)}   /* Change these or add your own. */	
+			.orange    {background-color: hsl( 39,80%,60%)}
+			.yellow    {background-color: hsl( 60,80%,60%)}   /* See http://en.wikipedia.org/wiki/List_of_colors */
+			.green     {background-color: hsl(149,80%,60%)}			
+			.blue      {background-color: hsl(240,80%,60%)}			  
+			
+			.tangerine {background-color: hsl( 33,99%,50%)}
+			.wheat     {background-color: hsl( 39,77%,83%)}	  /* hsl colors are easier to tweak than hex rgb      */
+			.wheat2    {background-color: hsl( 44,76%,51%)}
+			.ecru      {background-color: hsl( 45,35%,63%)}   /* The first number is the hue                      */
+			.vanilla   {background-color: hsl( 48,75%,81%)}   /* The second number is the color saturation        */
+			.pear      {background-color: hsl( 66,65%,54%)}	  /* The third number is the lightness                */
+											
+			 .ash      {background-color: hsl(135,03%,72%)}
+			 .xanadu   {background-color: hsl(136,08%,60%)}
+			 .slate    {background-color: hsl(210,13%,30%)}
+           
+            .azure     {background-color: hsl(210,90%,80%)}    
+			.violet    {background-color: hsl(274,99%,70%)}
+			.thistle   {background-color: hsl(300,24%,80%)}
+			.plum      {background-color: hsl(300,33%,70%)}
+			
+			.corporate  {background-color: hsl(203,60%,50%)}
+			
+			
+			.aqua		{background-color: hsl(206,46%,82%)}
+			.blue		{background-color: hsl(180,65%,81%)}
+			.brown		{background-color: hsl( 30,29%,46%)}
+			.carmine	{background-color: hsl(  5,54%,45%)}
+			.cerulean	{background-color: hsl(205,55%,75%)}
+			.chestnut	{background-color: hsl(358,41%,77%)}
+			.copper		{background-color: hsl( 18,61%,63%)}
+			.cornflower	{background-color: hsl(210,68%,80%)}
+			.gold		{background-color: hsl( 50,65%,72%)}
+			.goldenrod	{background-color: hsl( 55,67%,80%)}
+			.magenta	{background-color: hsl(310,91%,75%)}
+			.pink		{background-color: hsl(354,76%,92%)}
+			.plum		{background-color: hsl(300,33%,70%)}
+			.red-violet	{background-color: hsl(340,60%,65%)}
+			.robin_egg	{background-color: hsl(169,52%,73%)}
+			.silver		{background-color: hsl(  0,12%,76%)}
+			.spring_bud	{background-color: hsl( 80,55%,83%)}
+			.taupe		{background-color: hsl( 25,32%,62%)}
+			.papaya_whip	{background-color: hsl( 37,99%,92%)}
+			.paris_green	{background-color: hsl(140,52%,55%)}
+			.blue		{background-color: hsl(196,26%,75%)}
+			.brown		{background-color: hsl( 28,22%,42%)}
+			.gray		{background-color: hsl( 60,10%,79%)}
+			.green		{background-color: hsl(120,60%,67%)}
+			.magenta	{background-color: hsl(333,80%,78%)}
+			.orange		{background-color: hsl( 35,99%,64%)}
+			.pink		{background-color: hsl(346,99%,91%)}
+			.purple		{background-color: hsl(295,14%,67%)}
+			.red		{background-color: hsl(  3,99%,69%)}
+			.violet		{background-color: hsl(302,33%,70%)}
+			.yellow		{background-color: hsl( 60,96%,79%)}
+			.peach		{background-color: hsl( 39,99%,85%)}
+			.peach-orange	{background-color: hsl( 30,99%,80%)}
+			.peach_puff	{background-color: hsl( 40,99%,86%)}
+			.peach-yellow	{background-color: hsl( 39,89%,83%)}
+			.pear		{background-color: hsl( 66,75%,54%)}
+			.pearl		{background-color: hsl( 46,46%,89%)}
+			.peridot	{background-color: hsl( 59,99%,45%)}
+			.periwinkle	{background-color: hsl(240,99%,90%)}
+			
+			.no-fade  { background-image: none; } /* The no-fade class disables the background fade effect */
+			
+
+	

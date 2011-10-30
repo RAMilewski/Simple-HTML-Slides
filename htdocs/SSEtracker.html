@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>SSE Test</title>
+    <meta name="description" content="Tool to check if your browser supports Server-Sent Event HTML5 technology" />
+    <meta name="keywords" content="SSE, HTML5, WebSocket" />
+    <script type="text/javascript" src="js/md5.js"></script>
+    <style>
+        body { background-color: #D8DCE0; font-family: Tahoma; font-size: 14px; }
+        div.message-box > div.header > h1 { font-family: Tahoma; color: #fff; font-size: 18px; }
+        h1 { color: #3C5F87; font-family: Tahoma; font-size: 18px; }
+        div.message-box {
+            padding: 0;
+            margin: 40px;
+            width: 90%;
+        }
+        div.message-box > div.header {
+            background-color: #3C5F87;
+            -moz-border-radius: 5px 5px 0 0;
+            -webkit-border-radius: 5px 5px 0 0;
+            padding: 10px 20px;
+			position: relative;
+        }
+		
+        div.message-box > div.body {
+            padding: 10px 20px;
+            background-color: #fff;
+            -moz-border-radius: 0 0 5px 5px;
+            -webkit-border-radius: 0 0 5px 5px;
+        }
+        #output {
+           width: 100%;
+           height: 170px;
+           padding: 5px;
+        }
+         #slideset {
+           width: 100%;
+           height: 20px;
+           padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="message-box">
+        <div class="header">
+			
+            <h1>Server-Sent Event Support Test</h1>
+           
+        </div>
+        <div class="body">
+            <textarea cols="60" rows="1" id='slideset'></textarea>
+			<p id='sseStatus'>This text will be replaced</p> 
+            <textarea cols="20" rows="7" id="output"></textarea>
+        </div>
+    </div>
+    
+
+	<script type="text/javascript">
+		<!--
+		function include(filename)
+		{
+			var head = document.getElementsByTagName('head')[0];
+			
+			script = document.createElement('script');
+			script.src = filename;
+			script.type = 'text/javascript';
+			
+			head.appendChild(script);
+		}
+		
+		/* If this is a browser without SSE support, load the emulation layer 
+		*/
+		if (undefined !== window['EventSource']) {
+		    document.getElementById('sseStatus').innerHTML = "Browser has Native SSE Support";
+		}  else {
+		    document.getElementById('sseStatus').innerHTML = "Using SSE Emulation";
+		    include("js/emulateSSE.js");
+		}
+		
+		
+		(function() {
+		
+		    /**
+		     * Event logger
+		     */
+		    var log = function(message) {
+		        document.getElementById('output').value =  message + "\n";
+		    };
+		   
+		    /**
+		     * Event handler for server-sent messages
+		     */
+		    var onMessageHandler = function (event) {
+		        log(event.data);
+		    };
+		
+		
+		    window.onload = function() {           		
+			    var eventSrc = new EventSource('../s5sse.php?url=871320ed79a2d1f2414c246259772e35');
+				eventSrc.addEventListener('message', onMessageHandler);    
+		    };
+		}());// -->
+	</script>
+</body>   
+</html>
